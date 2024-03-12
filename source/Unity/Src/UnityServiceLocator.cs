@@ -11,6 +11,7 @@ namespace Microsoft.Practices.Unity
     /// <summary>
     /// An implementation of <see cref="IServiceLocator"/> that wraps a Unity container.
     /// </summary>
+    [CLSCompliant(false)]
     public sealed class UnityServiceLocator : ServiceLocatorImplBase, IDisposable
     {
         private IUnityContainer container;
