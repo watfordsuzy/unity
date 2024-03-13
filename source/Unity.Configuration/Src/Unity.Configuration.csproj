@@ -21,4 +21,12 @@
     <ProjectReference Include="..\..\Unity\Src\Unity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="..\..\UnityConfiguration30.xsd">
+      <Link>UnityConfiguration30.xsd</Link>
+      <Pack>true</Pack>
+      <PackagePath>contentFiles\any\any;content</PackagePath>
+    </Content>
+  </ItemGroup>
+
 </Project>
