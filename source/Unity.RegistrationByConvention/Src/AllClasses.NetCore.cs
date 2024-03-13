@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
+﻿#if NETSTANDARD2_0_OR_GREATER
+// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System;
 using System.Collections.Generic;
@@ -71,3 +72,4 @@ namespace Microsoft.Practices.Unity
         }
     }
 }
+#endif // NETSTANDARD2_0_OR_GREATER
