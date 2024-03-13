@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System.Web" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Unity\Src\Unity.csproj" />
   </ItemGroup>
 
