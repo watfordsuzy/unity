@@ -33,7 +33,11 @@ namespace Microsoft.Practices.Unity.InterceptionExtension
             Justification = "Need to use constructor so we can place attribute on it.")]
         static InterfaceInterceptorClassGenerator()
         {
+#if NETFRAMEWORK
             AssemblyBuilder = AppDomain.CurrentDomain.DefineDynamicAssembly(
+#else
+            AssemblyBuilder = System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly(
+#endif
                 new AssemblyName("Unity_ILEmit_InterfaceProxies"),
 #if DEBUG_SAVE_GENERATED_ASSEMBLY
                 AssemblyBuilderAccess.RunAndSave);
@@ -118,7 +122,12 @@ namespace Microsoft.Practices.Unity.InterceptionExtension
 
             AddConstructor();
 
+#if NETFRAMEWORK
             Type result = typeBuilder.CreateType();
+#else
+            Type result = typeBuilder.CreateTypeInfo();
+#endif
+
 #if DEBUG_SAVE_GENERATED_ASSEMBLY
             assemblyBuilder.Save("Unity_ILEmit_InterfaceProxies.dll");
 #endif

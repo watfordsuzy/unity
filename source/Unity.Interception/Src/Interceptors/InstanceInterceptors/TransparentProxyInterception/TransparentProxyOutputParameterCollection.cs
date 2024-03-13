@@ -1,4 +1,5 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
+﻿#if NETFRAMEWORK
+// Copyright (c) Microsoft Corporation. All rights reserved. See License.txt in the project root for license information.
 
 using System.Runtime.Remoting.Messaging;
 using System.Security;
@@ -26,3 +27,4 @@ namespace Microsoft.Practices.Unity.InterceptionExtension
         }
     }
 }
+#endif // NETFRAMEWORK
